@@ -1,0 +1,29 @@
+{ 
+  "name": "bh-mj-focus-detail", 
+  "version": "0.0.0", 
+  "description": "Biyaheroes MJML Focus Detail Component", 
+  "main": "focus-detail.deploy.js", 
+  "support": "focus-detail.support.js", 
+  "authors": [ 
+    "Biyaheroes Developers <developers@biyaheroes.com>", 
+    "Robot Biyaheroes <robot@biyaheroes.com>", 
+    "Vinse Vinalon <vinsevinalon@gmail.com>" 
+  ], 
+  "license": "MIT", 
+  "keywords": [ 
+    "biyaheroes", 
+    "mjml", 
+    "focus", 
+    "detail", 
+    "component", 
+    "bh-mj-focus-detail" 
+  ], 
+  "homepage": "https://github.com/Biyaheroes/bh-mj-focus-detail", 
+  "ignore": [ 
+    "**/.*", 
+    "node_modules", 
+    "bower_components", 
+    "test", 
+    "tests" 
+  ] 
+} 
