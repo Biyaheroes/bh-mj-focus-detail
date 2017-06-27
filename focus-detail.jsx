@@ -1,5 +1,5 @@
-"use strict"; 
- 
+"use strict";
+
 /*; 
   @module-license: 
     The MIT License (MIT) 
@@ -58,66 +58,66 @@
       "wichevr": "wichevr" 
     } 
   @end-include 
-*/ 
- 
-import { MJMLElement } from "mjml-core"; 
-import React, { Component } from "react"; 
-import Column from "mjml-column"; 
-import Section from "mjml-section"; 
-import Text from "mjml-text"; 
-import wichevr from "wichevr"; 
- 
-const tagName = "mj-focus-detail"; 
- 
-const parentTag = ["mj-container"]; 
- 
-const endingTag = false; 
- 
-const defaultMJMLDefinition = { 
-  "content": "", 
-  "attributes": { 
-    "title": "Title", 
-    "label": "Label", 
-    "value": "Value", 
-    "label-color": "gray", 
-    "value-color": "white" 
-  }, 
-}; 
- 
-@MJMLElement 
-class FocusDetail extends Component { 
-  render() { 
-    const { mjAttribute } = this.props; 
- 
-    return ( <Section { ...this.props } 
-      padding="0px 0px 0px 0px" 
-      background-color={mjAttribute("value-color")}> 
-      <Column width="30%" 
-        background-color={mjAttribute("label-color")}> 
-        <Text 
-          font-size="11px" 
-          font-weight="500" 
-          letter-spacing="0.3px"> 
-          {wichevr(mjAttribute("title"), mjAttribute("label"))} 
-        </Text> 
-      </Column> 
-      <Column 
-        width="70%" 
-        background-color={mjAttribute("value-color")}> 
-        <Text 
-          font-size="15px" 
-          text-transform="uppercase" 
-          letter-spacing="1px"> 
-          {mjAttribute("value")} 
-        </Text> 
-      </Column> 
-    </Section>); 
-  } 
-} 
- 
-FocusDetail.tagName = tagName; 
-FocusDetail.parentTag = parentTag; 
-FocusDetail.endingTag = endingTag; 
-FocusDetail.defaultMJMLDefinition = defaultMJMLDefinition; 
- 
+*/
+
+import { MJMLElement } from "mjml-core";
+import React, { Component } from "react";
+import Column from "mjml-column";
+import Section from "mjml-section";
+import Text from "mjml-text";
+import wichevr from "wichevr";
+
+const tagName = "mj-focus-detail";
+
+const parentTag = ["mj-container"];
+
+const endingTag = false;
+
+const defaultMJMLDefinition = {
+	"content": "",
+	"attributes": {
+		"title": "Title",
+		"label": "Label",
+		"value": "Value",
+		"label-color": "gray",
+		"value-color": "white"
+	},
+};
+
+@MJMLElement
+class FocusDetail extends Component {
+	render() {
+		const { mjAttribute } = this.props;
+
+		return (<Section { ...this.props }
+			padding="0px 0px 0px 0px"
+			background-color={mjAttribute("value-color")}>
+			<Column width="30%"
+				background-color={mjAttribute("label-color")}>
+				<Text
+					font-size="11px"
+					font-weight="500"
+					letter-spacing="0.3px">
+					{wichevr(mjAttribute("title"), mjAttribute("label"))}
+				</Text>
+			</Column>
+			<Column
+				width="70%"
+				background-color={mjAttribute("value-color")}>
+				<Text
+					font-size="15px"
+					text-transform="uppercase"
+					letter-spacing="1px">
+					{mjAttribute("value")}
+				</Text>
+			</Column>
+		</Section>);
+	}
+}
+
+FocusDetail.tagName = tagName;
+FocusDetail.parentTag = parentTag;
+FocusDetail.endingTag = endingTag;
+FocusDetail.defaultMJMLDefinition = defaultMJMLDefinition;
+
 export default FocusDetail; 
