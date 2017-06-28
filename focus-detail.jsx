@@ -89,29 +89,34 @@ class FocusDetail extends Component {
 	render() {
 		const { mjAttribute } = this.props;
 
-		return (<Section { ...this.props }
-			padding="0px 0px 0px 0px"
-			background-color={mjAttribute("value-color")}>
-			<Column width="30%"
-				background-color={mjAttribute("label-color")}>
-				<Text
-					font-size="11px"
-					font-weight="500"
-					letter-spacing="0.3px">
-					{wichevr(mjAttribute("title"), mjAttribute("label"))}
-				</Text>
-			</Column>
-			<Column
-				width="70%"
-				background-color={mjAttribute("value-color")}>
-				<Text
-					font-size="15px"
-					text-transform="uppercase"
-					letter-spacing="1px">
-					{mjAttribute("value")}
-				</Text>
-			</Column>
-		</Section>);
+		return (
+				<Section 
+					{ ...this.props }
+						padding="0px 0px 0px 0px"
+						background-color={ mjAttribute ( "value-color" ) }>
+					<Column 
+						width="30%"
+						background-color={ mjAttribute ( "label-color" ) } 
+						>
+						<Text
+							font-size= "11px"
+							font-weight= "500"
+							letter-spacing= "0.3px">
+							{ wichevr ( mjAttribute ( "title" ), mjAttribute( "label" ) ) }
+						</Text>
+					</Column>
+					<Column
+						width= "70%"
+						background-color={ mjAttribute ( "value-color" ) }
+						>
+						<Text
+							font-size= "15px"
+							text-transform= "uppercase"
+							letter-spacing= "1px">
+							{ mjAttribute ( "value" ) }
+						</Text>
+					</Column>
+				</Section>);
 	}
 }
 
