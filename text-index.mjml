@@ -1,7 +1,7 @@
 <mjml> 
-  <mj-body> 
-    <mj-container> 
-     
-    </mj-container> 
-  </mj-body> 
+	<mj-body> 
+		<mj-container> 
+		 <mj-focus-detail title="Hello World" value="This is a normal value" label="This is a label"/>
+		</mj-container> 
+	</mj-body> 
 </mjml> 
