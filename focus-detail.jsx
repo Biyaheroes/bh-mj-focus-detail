@@ -79,8 +79,8 @@ const defaultMJMLDefinition = {
 		"title": "Title",
 		"label": "Label",
 		"value": "Value",
-		"label-color": "gray",
-		"value-color": "white"
+		"label-color": "#dd5454",
+		"value-color": "#f95f5d"
 	},
 };
 

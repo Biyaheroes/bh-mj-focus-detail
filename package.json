@@ -7,11 +7,10 @@
   "deploy": "focus-detail.deply.js",
   "browser": "focus-detail.deploy.js",
   "scripts": {
-    "preinstall": "yarn global add babel-cli bower gulp-cli webpack webpack-dev-server watch && npm install npm@latest mjml@latest veon@latest browser-sync@latest --global --force-latest",
-    "postinstall": "npm rebuild node-sass",
     "deploy": "gulp clean && veon set production \"gulp && babel focus-detail.js --out-file focus-detail.support.js --source-maps && webpack --progress\"",
     "build": "gulp clean && gulp && babel focus-detail.js --out-file focus-detail.support.js --source-maps && webpack --progress",
-    "test": "veon set test \"gulp && webpack --progress --env.test && mjml test-index.mjml --output test-index.html\"",
+    "test": "veon set test \"gulp && webpack --progress --env.test && npm run render\"",
+    "render": "mjml test-index.mjml --output test-index.html",
     "watch": "gulp clean && watch \"npm run test\" ./ ./*/ --filter=./.filter.js --wait=5 --interval=5 --ignoreDotFiles",
     "live": "gulp clean && gulp watch",
     "server": "veon set test \"webpack-dev-server --env.test\"",
@@ -49,7 +48,7 @@
     "mjml-section": "^3.3.3",
     "mjml-text": "^3.3.3",
     "react": "^15.6.1",
-    "wichevr": "^0.10.0"
+    "wichevr": "^0.11.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
